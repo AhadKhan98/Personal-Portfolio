@@ -1,1 +1,5 @@
-Hello World!
+<h1> All my jobs </h1>
+
+{% for project in projects.all %}
+{{project.summary}}
+{% endfor %}
