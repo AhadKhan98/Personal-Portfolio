@@ -2,7 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Project(models.Model):
-    # Image
+    title = models.CharField(max_length=25)
     image = models.ImageField(upload_to='images/')
-    # Summary
-    summary = models.CharField(max_length=250)
+    summary = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.title
