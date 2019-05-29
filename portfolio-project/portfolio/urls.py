@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 import home.views
 import projects.views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('projects', projects.views.project, name='projects'),
     path('',home.views.home, name='home'),
-]
+] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
