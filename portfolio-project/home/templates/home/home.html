@@ -41,7 +41,10 @@
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white">About Me</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information..</p>
+          <p class="text-muted">My passion for technology has been the driving factor for me learning different aspects of computer science throughout my life.
+I have learnt various parts of computer science including software engineering, data analysis, web designing, app development, ethical hacking, game development etc.
+Currently, I am pursuing my bachelor's in computer science at the Berea College in Kentucky where I have been awarded a full-tuiton scholarship. Alongside programming for my classes, I indulge myself in consistently taking online courses related to software development and working on as many side-projects as I can to make sure I implement whatever it is that I learn.
+I plan on becoming a top of the notch software developer; using programming to find viable solutions for currently existing problems.</p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Contact</h4>
@@ -59,6 +62,15 @@
       <a href="{% url 'home'%}" class="navbar-brand d-flex align-items-center">
         <strong>Home</strong>
       </a>
+      <a href="#projects" class="navbar-brand d-flex align-items-center">
+        <strong> About Me</strong>
+      </a>
+      <a href="#projects" class="navbar-brand d-flex align-items-center">
+        <strong>Projects</strong>
+      </a>
+      <a href="#projects" class="navbar-brand d-flex align-items-center">
+        <strong>Work Experience</strong>
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -74,13 +86,15 @@
       <p class="lead text-muted">I deeply enjoy creating software and the whole learning process that comes along with it. </p>
       <img src="{% static 'ahad.png' %}" height=300></img>
       <p>
-        <a href="#" class="btn btn-primary my-2">Resume</a>
+        <a href="#footomg" class="btn btn-primary my-2">Resume</a>
         <a href="mailto:ahad_zai@berea.edu" class="btn btn-secondary my-2">Email Me</a>
       </p>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
+
+
+  <div class="album py-5 bg-light" id="projects">
     <div class="container">
       <div class="row">
         {% for project in projects.all %}
