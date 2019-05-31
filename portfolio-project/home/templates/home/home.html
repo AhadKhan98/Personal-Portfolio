@@ -41,10 +41,7 @@
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white">About Me</h4>
-          <p class="text-muted">My passion for technology has been the driving factor for me learning different aspects of computer science throughout my life.
-I have learnt various parts of computer science including software engineering, data analysis, web designing, app development, ethical hacking, game development etc.
-Currently, I am pursuing my bachelor's in computer science at the Berea College in Kentucky where I have been awarded a full-tuiton scholarship. Alongside programming for my classes, I indulge myself in consistently taking online courses related to software development and working on as many side-projects as I can to make sure I implement whatever it is that I learn.
-I plan on becoming a top of the notch software developer; using programming to find viable solutions for currently existing problems.</p>
+          <p class="text-muted">Some description goes here</p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Contact</h4>
@@ -62,13 +59,13 @@ I plan on becoming a top of the notch software developer; using programming to f
       <a href="{% url 'home'%}" class="navbar-brand d-flex align-items-center">
         <strong>Home</strong>
       </a>
-      <a href="#projects" class="navbar-brand d-flex align-items-center">
+      <a href="#about_me" class="navbar-brand d-flex align-items-center">
         <strong> About Me</strong>
       </a>
       <a href="#projects" class="navbar-brand d-flex align-items-center">
         <strong>Projects</strong>
       </a>
-      <a href="#projects" class="navbar-brand d-flex align-items-center">
+      <a href="#work_experience" class="navbar-brand d-flex align-items-center">
         <strong>Work Experience</strong>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,29 +90,114 @@ I plan on becoming a top of the notch software developer; using programming to f
   </section>
 
 
-
-  <div class="album py-5 bg-light" id="projects">
+<div class="album py-2 bg-dark">
+  <div class="border-box" id="about_me" >
     <div class="container">
       <div class="row">
-        {% for project in projects.all %}
-        <div class="col-md-4">
-          <a href="{% url 'detail' project.id %}">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ project.image.url }}"></img>
-            <div class="card-body">
-              <p class="card_text">{{ project.title }}</p>
-              </a>
-              <p class="card-text">{{project.summary}}</p>
-              <div class="d-flex justify-content-between align-items-center">
-              </div>
-            </div>
-          </div>
+        <h3 style="color: white;"> About Me </h3>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <p style="width:1000px;">
+            My passion for technology has been the driving factor for my learning of different aspects of computer science throughout my life.
+I have learnt various parts of computer science including software engineering, data analysis, web designing, app development, ethical hacking and game development.<br>
+Currently, I am pursuing my bachelor's in computer science at the Berea College in Kentucky where I have been awarded a full-tuiton scholarship. Alongside programming for my classes, I indulge myself in consistently taking online courses related to software development and working on as many side-projects as I can to ensure that I implement in real life whatever I learn. <br>
+I plan on becoming a top of the notch software developer using programming to find viable solutions for existing problems.
+          </p>
+          <style>
+          * {box-sizing: border-box}
+
+          .skills {
+            text-align: right;
+            padding: 2px;
+            color: white;
+          }
+
+          .python {width: 93%; background-color: #2196F3;}
+          .cpp {width: 80%; background-color: #006847;}
+          .java {width: 85%; background-color: #534368;}
+          .html_css {width: 68%; background-color: #B22234;}
+          </style>
+
+          <h5>Technical Skills</h5>
+
+          <div class="container">
+        	<p>Python</p>
+          <div class="skills python">93%</div>
+          <p>Java</p>
+          <div class="skills java">85%</div>
+          <p>C++</p>
+          <div class="skills cpp">80%</div>
+          <p>HTML + CSS</p>
+          <div class="skills html_css">68%</div>
         </div>
-        {% endfor %}
+      </div>
+        </div>
       </div>
     </div>
   </div>
 
+
+
+  <div class="album py-2 bg-dark">
+    <div class="border-box" id="projects" >
+      <div class="container">
+        <div class="row">
+          <h3 style="color: white;"> My Projects </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          {% for project in projects.all %}
+          <div class="col-md-4">
+            <a href="{% url 'detail' project.id %}">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ project.image.url }}"></img>
+              <div class="card-body">
+                <p class="card_text">{{ project.title }}</p>
+                </a>
+                <p class="card-text">{{project.summary}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="album py-2 bg-dark">
+      <div class="border-box" id="work_experience" >
+        <div class="container">
+          <div class="row">
+            <h3 style="color: white;"> Work Experience </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10">
+              <p style="width:1000px;">
+                My Work Experience Goes Here!
+              </p>
+
+
+          </div>
+            </div>
+          </div>
+        </div>
 
 </main>
 
@@ -127,6 +209,7 @@ I plan on becoming a top of the notch software developer; using programming to f
     <p align='center'>© 2019 <a href="{% url 'home' %}">Ahad Zai</a>. All rights reserved</p>
     <p align='center'>This website was developed by myself using <a href="https://www.python.org/">Python</a>, <a href="https://www.djangoproject.com/">Django</a> and a <a href="https://getbootstrap.com/">Bootstrap</a> template</a></p>
   </div>
+
 </footer>
 <script src="{% static 'jquery-3.4.1.min.js' %}" </script>
 <script src="{% static 'popper.min.js' %}"</script>
