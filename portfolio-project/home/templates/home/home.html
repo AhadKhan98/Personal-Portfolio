@@ -8,13 +8,12 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Ahad Zai</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
 
-
+<!-- CSS Styling starts here -->
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -71,29 +70,13 @@
     .java {width: 80%; background-color: #534368;}
     .html_css {width: 50%; background-color: #B22234;}
     </style>
-    <!-- Custom styles for this template -->
+    <!-- CSS Styling ends here -->
+
     <link href="album.css" rel="stylesheet">
   </head>
   <body>
     <header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About Me</h4>
-          <p class="text-muted">Some description goes here</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+      <!-- Navigation bar starts here -->
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-between">
       <a href="{% url 'home'%}" class="navbar-brand d-flex align-items-center">
@@ -113,10 +96,11 @@
       </a>
     </div>
   </div>
+  <!-- Navigation bar ends here -->
 </header>
 
 <main role="main">
-
+<!-- Title and summary starts here -->
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading" style="font-size:400%">Ahad Zai</h1>
@@ -128,8 +112,9 @@
       </p>
     </div>
   </section>
+<!-- Title and summary ends here -->
 
-
+<!-- About me starts here -->
 <div class="album py-2 bg-dark">
   <div class="border-box" id="about_me" >
     <div class="container">
@@ -165,9 +150,10 @@
       </div>
     </div>
   </div>
+  <!-- About me ends here -->
 
 
-
+  <!-- Projects start here -->
   <div class="album py-2 bg-dark">
     <div class="border-box" id="projects" >
       <div class="container">
@@ -199,8 +185,9 @@
         </div>
       </div>
     </div>
+    <!-- Projects end here -->
 
-
+  <!-- Work experience starts here -->
     <div class="album py-2 bg-dark">
       <div class="border-box" id="work_experience" >
         <div class="container">
@@ -264,7 +251,9 @@
           </div>
         </div>
       </div>
+<!-- Work experience ends here -->
 
+<!-- Awards & Certifications start here -->
       <div class="album py-2 bg-dark">
         <div class="border-box" id="awards_certifications">
           <div class="container">
@@ -296,7 +285,7 @@
             </div>
           </div>
         </div>
-
+<!-- Awards & Certifications end here -->
 
 
 </main>
