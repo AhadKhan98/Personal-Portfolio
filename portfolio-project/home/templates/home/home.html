@@ -108,6 +108,9 @@
       <a href="#work_experience" class="navbar-brand d-flex align-items-center">
         <strong>Work Experience</strong>
       </a>
+      <a href="#awards_certifications" class="navbar-brand d-flex align-items-center">
+        <strong>Awards & Certifications</strong>
+      </a>
     </div>
   </div>
 </header>
@@ -120,7 +123,7 @@
       <p class="lead text-muted" style="font-size:175%">I deeply enjoy creating software and the whole learning process that comes along with it. </p>
       <img src="{% static 'ahad.png' %}" height=300></img>
       <p>
-        <a href="#footomg" class="btn btn-primary my-2">Resume</a>
+        <a href="#" class="btn btn-primary my-2">Resume</a>
         <a href="mailto:ahad_zai@berea.edu" class="btn btn-secondary my-2">Email Me</a>
       </p>
     </div>
@@ -140,10 +143,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10">
-          <p style="width:1000px;font-size:125%">
+          <p style="width:match_parent;font-size:125%">
             For as long as I can remember, I have always been victim to an ardent inquisitiveness regarding all realms of technology. When I was a child, I would break apart various devices and toys simply to disinter their internal workings and scrutinize their core mechanisms. Inevitably, as I grew older, the inquisitiveness became more potent and thus led me to explore different aspects of computer science and develop a meticulous understanding of its prominent facets, such as, software engineering, data analysis, web designing, app development, ethical hacking and game development.<br><br>
-Currently, I am pursuing my bachelor's in computer science at the Berea College in Kentucky where I have been awarded a full-tuition scholarship. Alongside programming for my classes, I indulge myself in consistently taking online courses related to software development and working on as many side-projects as I can to ensure that I implement in real life whatever I learn.<br><br>
-I plan on becoming a top of the notch software developer using programming to find viable solutions for existing problems.
+            Currently, I am pursuing my bachelor's in computer science at the Berea College in Kentucky where I have been awarded a full-tuition scholarship. Alongside programming for my classes, I indulge myself in consistently taking online courses related to software development and working on as many side-projects as I can to ensure that I implement in real life whatever I learn.<br><br>
+            I plan on becoming a top of the notch software developer using programming to find viable solutions for existing problems.
           </p>
           <h5>Technical Skills</h5>
 
@@ -257,10 +260,44 @@ I plan on becoming a top of the notch software developer using programming to fi
               		</div>
               	</div>
               </div>
-          </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="album py-2 bg-dark">
+        <div class="border-box" id="awards_certifications">
+          <div class="container">
+            <div class="row">
+              <h3 style="color: white;"> Awards & Certifications </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              {% for project in projects.all %}
+              <div class="col-md-4">
+                <a href="{% url 'detail' project.id %}">
+                <div class="card mb-4 shadow-sm">
+                  <img class="card-img-top" src="{{ project.image.url }}"></img>
+                  <div class="card-body">
+                    <p class="card_text">{{ project.title }}</p>
+                    </a>
+                    <p class="card-text">{{project.summary}}</p>
+                    <p class="card-text"><strong>Language:</strong> {{project.skills}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+
 
 </main>
 
