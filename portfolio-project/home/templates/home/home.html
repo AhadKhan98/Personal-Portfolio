@@ -205,44 +205,17 @@
               	<div class="row">
               		<div class="col-md-12 offset">
               			<ul class="timeline" style="width:match_parent;height:match_parent">
+                      {% for job in jobs.all %}
                       <li style="font-size:180%">
-                        <p class="float-right" style="color:#0000EE">Aug 2018 - May 2019</p>
-                        <strong style="color:#0000EE;">Data Analyst Intern</strong><br>
-                        <i style="font-size:90%"> Indiana University-Purdue University</i><br>
-                        <i style="font-size:70%"> Indianapolis, Indiana, USA</i>
-                        <p style="font-size:75%">• Querying IU School of dentistry EDR database to create research datasets. <br>
-                          • Data cleaning, data transformation and data reduction for analysis purposes. <br>
-                          •	Developing text mining approaches and evaluating their performances. <br>
-                          •	Creation of prediction models and evaluating their performances.
+                        <p class="float-right" style="color:#0000EE">{{job.date}}</p>
+                        <strong style="color:#0000EE;">{{job.title}}</strong><br>
+                        <i style="font-size:90%"> {{job.site}}</i><br>
+                        <i style="font-size:70%"> {{job.location}}</i>
+                        <p style="font-size:75%">{{job.description|safe}}
                         </p>
                       </li>
-                      <li style="font-size:180%">
-                        <p class="float-right" style="color:#0000EE">Aug 2018 - May 2019</p>
-                        <strong style="color:#0000EE;">Training Associate</strong><br>
-                        <i style="font-size:90%"> Berea College | Labor Program</i><br>
-                        <i style="font-size:70%"> Berea, Kentucky, USA</i>
-                        <p style="font-size:75%">• Automated the process of manually logging and keeping track of over 4000 books in the training center by developing a library management software in C++ and Xcode. <br>
-                          • Developed leadership skills by actively participating in training clients.<br>
-                          • Encouraged innovation in the office by bringing forward ideas and improvements to the currently implemented technical solutions.</p>
-                      </li>
-                      <li style="font-size:180%">
-                        <p class="float-right" style="color:#0000EE">Aug 2017 - Aug 2018</p>
-                        <strong style="color:#0000EE;">Office Assistant</strong><br>
-                        <i style="font-size:90%"> Berea College | Labor Program</i><br>
-                        <i style="font-size:70%"> Berea, Kentucky, USA</i>
-                        <p style="font-size:75%">• Redesigned the visual interface alongside the architectural interface for the Labor Program’s website. Implemented a responsive CSS design.<br>
-                          • Reduced the burden on the team by assisting in office tasks. <br>
-                          • Slashed time-consuming training sessions that required staff<br>
-                          to train clients in using Berea College’s time keeping software
-                          by creating and publishing tutorial videos on using the software.</p>
-                      </li>
-              				<li style="font-size:180%">
-              					<p class="float-right" style="color:#0000EE">Jan 2016 - Jul 2016</p>
-                        <strong style="color:#0000EE;">Software Developer</strong><br>
-                        <i style="font-size:90%"> Arabian City Gwadar</i><br>
-                        <i style="font-size:70%"> Lahore, Punjab, Pakistan</i>
-              					<p style="font-size:75%">Eliminated the need to search through excel files when searching for a client’s information by programming a front-desk software in C# that imported data from multiple excel files and allowed users to search, modify or add new entries in a user-friendly manner.</p>
-              				</li>
+                      {% endfor %}
+
               			</ul>
               		</div>
               	</div>
