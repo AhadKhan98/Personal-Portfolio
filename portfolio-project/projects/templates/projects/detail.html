@@ -42,7 +42,7 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">{{ project.title }}</h1>
-      <p class="lead text-muted">{{ project.description }}</p>
+      <p class="lead text-muted">{{ project.description|urlize }}</p>
       <img src="{{ project.image.url }}" height=300></img>
       <p>
         <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>

@@ -7,6 +7,7 @@ class Project(models.Model):
     summary = models.CharField(max_length=100)
     skills = models.CharField(max_length=50)
     description = models.TextField()
+    githuburl = models.CharField(max_length=200)
 
 class Job(models.Model):
     title = models.CharField(max_length=100)

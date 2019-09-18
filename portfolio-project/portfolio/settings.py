@@ -25,7 +25,7 @@ SECRET_KEY = '0mj#@tfl5as1mfvxs(s_8f-4s7cfy)#21*%@2ac8427u3aiu9*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ahadkhan98.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -119,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join('/home/ahadkhan98/Personal-Portfolio/portfolio-project/static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR

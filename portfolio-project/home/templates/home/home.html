@@ -170,14 +170,15 @@
         <div class="row">
           {% for project in projects.all %}
           <div class="col-md-4">
-            <a href="{% url 'detail' project.id %}">
             <div class="card mb-4 shadow-sm">
               <img class="card-img-top" src="{{ project.image.url }}"></img>
               <div class="card-body">
-                <p class="card_text">{{ project.title }}</p>
-                </a>
+                <p class="card_text"><strong>{{ project.title }}</strong></p>
                 <p class="card-text">{{project.summary}}</p>
-                <p class="card-text"><strong>Language:</strong> {{project.skills}}</p>
+                <p class="card-text"><strong>Skills Learned:</strong> {{project.skills}}</p>
+                <p>
+                    <a href="{{ project.githuburl }}" class="btn btn-secondary" style="background-color:#000000;"><img src="{% static 'github.png' %}" style="width:20px;"></img> <b>Find on GitHub</b></a>
+                </p>
                 <div class="d-flex justify-content-between align-items-center">
                 </div>
               </div>
@@ -213,7 +214,7 @@
                         <strong style="color:#0000EE;">{{job.title}}</strong><br>
                         <i style="font-size:90%"> {{job.site}}</i><br>
                         <i style="font-size:70%"> {{job.location}}</i>
-                        <p style="font-size:75%">{{job.description|safe}}
+                        <p style="font-size:50%">{{job.description|linebreaks}}
                         </p>
                       </li>
                       {% endfor %}
